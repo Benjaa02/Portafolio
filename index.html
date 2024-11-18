@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portafolio de Benjamin Bartuano</title>
+  <!-- Enlace a Font Awesome para los íconos de redes sociales -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="Estilos.css"> 
+  <script src="Audioeimagen.js"></script>
+</head>
+<body>
+
+  <!-- Encabezado con nombre y navegación -->
+  <header class="main-header">
+    <div class="header-container">
+      <div class="header-name">Benjamin Bartuano</div>
+      <nav class="nav-links">
+        <a href="#home">Inicio</a>
+        <a href="#about">Sobre mí</a>
+        <a href="#skills">Habilidades</a>
+        <a href="#projects">Proyectos</a>
+        <a href="#contact">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+ <!-- Sección de Introducción -->
+<section class="intro-section" id="home">
+  <div class="wave-background">
+    <svg viewBox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg">
+      <path fill="#1a3c5a" fill-opacity="1" 
+            d="M0,160L40,160C80,160,160,160,240,138.7C320,117,400,75,480,74.7C560,75,640,117,720,149.3C800,181,880,203,960,213.3C1040,224,1120,224,1200,208C1280,192,1360,160,1400,144L1440,128L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z">
+      </path>
+    </svg>
+  </div>
+  <div class="intro-content">
+    <h1 class="intro-title">¡Bienvenido a mi Portafolio!</h1>
+    <p class="intro-text"> Explora mis proyectos y habilidades en programación y diseños web.</p>
+    <a href="#projects" class="cta-button">Descubre más</a>
+  </div>
+</section>
+
+  <!-- Sección "Sobre mí" -->
+  <section class="about-section" id="about">
+    <h2>Sobre mí</h2>
+    <div class="about-content">
+      <div class="about-image">
+        <img src="C:\xampp\htdocs\Portafolio V\imagenes\sobre mi  (1).jpg" alt="Foto de Benjamin Bartuano">
+      </div>
+      <div class="about-text">
+        <p>Soy un estudiante con muchas ganas de seguir aprendiendo y creciendo en este campo. Aunque no tengo mucha experiencia profesional he participado en varios proyectos que me han permitido poner en práctica lo aprendido e ir mejorando mis habilidades. Cada proyecto es una oportunidad para seguir creciendo</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección "Habilidades" -->
+<section class="skills-section" id="skills">
+  <h2>Habilidades</h2>
+  <p class="skills-intro">Estas son mis principales áreas en las que destaco, abarcando tanto habilidades técnicas como mis herramientas de desarrollo.</p>
+  
+  <div class="skills-grid">
+    <!-- Tarjeta: Desarrollo Web -->
+    <div class="skills-card">
+      <div class="skills-icon">
+        <i class="fas fa-code"></i>
+      </div>
+      <h3>Desarrollo Web</h3>
+      <p>Creación de interfaces modernas y funcionales.</p>
+      <ul>
+        <li><i class="fab fa-html5"></i> HTML</li>
+        <li><i class="fab fa-css3-alt"></i> CSS</li>
+        <li><i class="fab fa-js"></i> JavaScript</li>
+      </ul>
+    </div>
+    
+    <!-- Tarjeta: Bases de Datos -->
+    <div class="skills-card">
+      <div class="skills-icon">
+        <i class="fas fa-database"></i>
+      </div>
+      <h3>Bases de Datos</h3>
+      <p>Gestión y modelado de bases de datos.</p>
+      <ul>
+        <li><i class="fas fa-server"></i> MySQL</li>
+        <li><i class="fas fa-database"></i> SQL Server</li>
+      </ul>
+    </div>
+    
+    <!-- Tarjeta: Lenguajes de Programación -->
+    <div class="skills-card">
+      <div class="skills-icon">
+        <i class="fas fa-terminal"></i>
+      </div>
+      <h3>Lenguajes de Programación</h3>
+      <p>Soluciones eficientes con lenguajes de programación versátiles.</p>
+      <ul>
+        <li><i class="fab fa-java"></i> Java</li>
+        <li><i class="fab fa-python"></i> Python</li>
+        
+      </ul>
+    </div>
+    
+    <!-- Tarjeta: Herramientas -->
+    <div class="skills-card">
+      <div class="skills-icon">
+        <i class="fas fa-tools"></i>
+      </div>
+      <h3>Herramientas</h3>
+      <p>Optimización del flujo de trabajo con herramientas modernas.</p>
+      <ul>
+        <li><i class="fab fa-git-alt"></i> Git</li>
+        <li><i class="fab fa-github"></i> GitHub</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+  <!-- Sección de Proyectos -->
+<section class="projects-section" id="projects">
+  <h2>Proyectos</h2>
+  <div class="project-grid">
+      <!-- Proyecto 1 con enlace -->
+      <div class="project-card">
+          <a href="https://proyecto-ds-5.vercel.app/" target="_blank">
+              <img src="C:\xampp\htdocs\Portafolio V\imagenes\proyecto 1.png" alt="Proyecto 1">
+              <h3>Proyecto 1</h3>
+          </a>
+      </div>
+
+      <!-- Proyecto 2 con enlace -->
+      <div class="project-card" onclick="openModal('C:\\xampp\\htdocs\\Portafolio V\\imagenes\\proyecto2.png')">
+          <img src="C:\xampp\htdocs\Portafolio V\imagenes\proyecto2.png" alt="Proyecto 2">
+          <h3>Proyecto 2</h3>
+      </div>
+
+      <!-- Proyecto 3 con modal -->
+      <div class="project-card" onclick="openModal('C:\\xampp\\htdocs\\Portafolio V\\imagenes\\flyer DSV.png')">
+          <img src="C:\xampp\htdocs\Portafolio V\imagenes\flyer DSV.png" alt="Proyecto 3">
+          <h3>Proyecto 3</h3>
+      </div>
+
+      <!-- Proyecto 4 con audio -->
+      <div class="project-card" onclick="playAudio()">
+          <img src="C:\xampp\htdocs\Portafolio V\imagenes\logo-removebg-preview.png" alt="Proyecto 4">
+          <h3>Proyecto 4</h3>
+      </div>
+  </div>
+</section>
+
+<!-- Modal para mostrar imagen en grande -->
+<div id="myModal" class="modal">
+  <span class="close" onclick="closeModal()">&times;</span>
+  <img class="modal-content" id="imgModal">
+  <div id="caption"></div>
+</div>
+
+<!-- Audio -->
+<audio id="audio" style="display:none;">
+  <source src="C:\xampp\htdocs\Portafolio V\Audio\Cuña Publicitaria (1).mp3" type="audio/mp3">
+</audio>
+
+
+<!-- Modal para mostrar imagen en grande -->
+<div id="myModal" class="modal">
+  <span class="close" onclick="closeModal()">&times;</span>
+  <img class="modal-content" id="imgModal">
+  <div id="caption"></div>
+</div>
+
+<!-- Audio -->
+<audio id="audio" style="display:none;">
+  <source src="C:\xampp\htdocs\Portafolio V\Audio\Cuña Publicitaria (1).mp3" type="audio/mp3">
+</audio>
+
+      
+          <!-- Audio oculto -->
+          <audio id="myAudio">
+              <source src="C:\xampp\htdocs\Portafolio V\Audio\Cuña Publicitaria (1).mp3" type="audio/mpeg">
+              Tu navegador no soporta el elemento de audio.
+          </audio>
+      </div>
+      
+      <script>
+          function playAudio() {
+              var audio = document.getElementById("myAudio");
+              audio.play();
+          }
+      </script>
+    </div>
+</section>
+
+  <!-- Sección de Contacto -->
+  <section class="contact-section" id="contact">
+    <h2>Contacto</h2>
+    <p>¿Tienes alguna pregunta o quieres ponerte en contacto conmigo? No dudes en enviarme un correo o visitar mis redes sociales.</p>
+    <a href="mailto:bbartuano2@gmail.com" class="contact-button">Enviar un correo</a>
+    
+    <!-- Redes sociales -->
+    <div class="social-links">
+      <a href="https://www.facebook.com/benjamin.bartuano?locale=es_LA" target="_blank" class="social-icon">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="https://www.instagram.com/jeanpaulll02/" target="_blank" class="social-icon">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://github.com/benjamin" target="_blank" class="social-icon">
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+  </section>
+
+  <!-- Pie de página -->
+  <footer>
+    &copy; 2024 Benjamin Bartuano - Desarrollo de Software V.
+  </footer>
+
+</body>
+</html>
