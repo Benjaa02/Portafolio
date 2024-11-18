@@ -309,29 +309,36 @@ a:hover {
 
 /* Sección de Proyectos */
 .projects-section {
-  padding: 60px 20px;
+  padding: 80px 20px;
   text-align: center;
   background-color: #F7F7F7;
+  min-height: 700px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centra verticalmente el contenido */
+  align-items: center; /* Centra horizontalmente el contenido */
 }
 
 .projects-section h2 {
-  font-size: 2.5em;
+  font-size: 3em;
   color: #1A3C5A;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
+  text-align: center; /* Asegura que el título esté centrado */
 }
 
 .project-grid {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-  max-width: 1200px;
+  justify-content: center; /* Centra las tarjetas en el contenedor */
+  gap: 30px;
+  max-width: 1300px;
   margin: 0 auto;
+  align-items: center; /* Centra las tarjetas si hay filas con menos tarjetas */
 }
 
 .project-card {
-  width: 280px;
-  height: 200px;
+  width: 320px;
+  height: 240px;
   background-color: #FFFFFF;
   border-radius: 8px;
   overflow: hidden;
@@ -339,102 +346,162 @@ a:hover {
   flex-direction: column;
   justify-content: flex-end;
   padding: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s;
+  text-align: center; /* Centra el contenido dentro de la tarjeta */
 }
 
 .project-card img {
   width: 100%;
-  height: 140px;
+  height: 160px;
   object-fit: cover;
   border-radius: 8px 8px 0 0;
 }
 
 .project-card h3 {
   color: #1A3C5A;
-  font-size: 1.2em;
+  font-size: 1.4em;
+  text-align: center; /* Asegura que el título dentro de la tarjeta esté centrado */
 }
 
 .project-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-8px);
 }
 
- /* Estilos para el modal */
- .modal {
-  display: none; /* Ocultar el modal por defecto */
-  position: fixed; /* Fijar el modal en la pantalla */
-  z-index: 1; /* Asegurarse de que el modal se muestra sobre otros elementos */
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto; /* Hacer que el modal sea desplazable si la imagen es más grande que la ventana */
-  background-color: rgba(0, 0, 0, 0.8); /* Fondo oscuro con transparencia */
+/* Estilos para el modal */
+.modal {
+    display: none; /* Ocultar el modal por defecto */
+    position: fixed; /* Fijar el modal en la pantalla */
+    z-index: 1000; /* Asegurarse de que el modal se muestra sobre otros elementos */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Hacer que el modal sea desplazable si la imagen es más grande que la ventana */
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo oscuro con transparencia */
 }
 
 /* Estilos para la imagen dentro del modal */
 .modal-content {
-  margin: auto;
-  display: block;
-  max-width: 90%;
-  max-height: 80%;
-  height: auto;
-  width: auto;
+    margin: auto;
+    display: block;
+    max-width: 70%; /* Reducir tamaño para vista previa */
+    max-height: 70%; /* Reducir tamaño para vista previa */
+    border-radius: 10px; /* Bordes redondeados para la imagen */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Sombra para resaltar la imagen */
+    animation: fadeIn 0.3s; /* Animación al abrir */
 }
 
-/* Estilo para el texto de la leyenda */
-#caption {
-  text-align: center;
-  color: white;
-  font-size: 18px;
-  padding: 10px;
+/* Animación de desvanecimiento */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 /* Estilo para el botón de cerrar */
 .close {
-  position: absolute;
-  top: 10px;
-  right: 25px;
-  color: white;
-  font-size: 36px;
-  font-weight: bold;
-  cursor: pointer;
+    position: absolute;
+    top: 15px; /* Más cerca de la imagen */
+    right: 25px; /* Más cerca de la imagen */
+    color: white;
+    font-size: 24px; /* Reducir el tamaño */
+    font-weight: bold;
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.5); /* Fondo oscuro para resaltar la "X" */
+    border-radius: 50%; /* Botón redondeado */
+    padding: 5px 10px;
 }
 
+.close:hover {
+    background: rgba(255, 255, 255, 0.5); /* Cambiar color al pasar el ratón */
+    color: black;
+}
 
-/* Sección de Contacto */
+/* Botones estilizados */
+.audio-controls {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.btn {
+  padding: 6px 12px; /* Reducir el relleno */
+  font-size: 14px;   /* Tamaño de fuente más pequeño */
+  border: none;
+  border-radius: 20px; /* Bordes redondeados más pequeños */
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Botón de reproducir */
+.play-btn {
+  background-color: #28a745;
+  color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra más ligera */
+}
+
+.play-btn:hover {
+  background-color: #218838;
+  transform: scale(1.05); /* Efecto hover más sutil */
+}
+
+/* Botón de detener */
+.stop-btn {
+  background-color: #dc3545;
+  color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra más ligera */
+}
+
+.stop-btn:hover {
+  background-color: #c82333;
+  transform: scale(1.05); /* Efecto hover más sutil */
+}
+
+/* Sección de contacto */
 .contact-section {
-  padding: 60px 20px;
+  padding: 30px 20px;  /* Reducción del padding */
   text-align: center;
-  background-color: #FFFFFF;
+  background-color: #f7f4f4; /* Fondo blanco */
+  min-height: 250px; /* Menor altura mínima */
+  margin-top: 20px; /* Menos espacio entre la sección de proyectos y la de contacto */
+  width: 100%; /* Asegura que la sección ocupe todo el ancho */
 }
 
 .contact-section h2 {
-  font-size: 2.5em;
-  color: #1A3C5A;
-  margin-bottom: 20px;
+  font-size: 2.5em; /* Aumentar tamaño del título */
+  color: #1A3C5A; /* Azul oscuro */
+  margin-bottom: 20px; /* Mayor espacio debajo del título */
 }
 
 .contact-section p {
-  color: #777;
-  font-size: 1.1em;
-  margin-bottom: 20px;
+  color: #777; /* Gris suave para el texto */
+  font-size: 1.2em; /* Aumentar tamaño del texto */
+  margin-bottom: 20px; /* Mayor espacio debajo del texto */
 }
 
 .contact-button {
   display: inline-block;
-  padding: 10px 20px;
+  padding: 10px 20px; /* Botón con un poco más de espacio */
   color: #fff;
-  background-color: #4CAF50;
-  border: 2px solid #4CAF50;
+  background-color: #4CAF50; /* Verde como fondo */
+  border: 2px solid #4CAF50; /* Verde como borde */
   border-radius: 4px;
+  font-size: 1.1em; /* Aumentar tamaño de la fuente del botón */
   transition: background-color 0.3s, color 0.3s;
 }
 
 .contact-button:hover {
-  background-color: #fff;
-  color: #CA4F50;
+  background-color: #fff; /* Fondo blanco al pasar el ratón */
+  color: #CA4F50; /* Rojo para el texto al pasar el ratón */
 }
+
+
 
 /* Redes Sociales */
 .social-links {
@@ -455,10 +522,15 @@ a:hover {
   transform: scale(1.2);
 }
 
-/* Pie de página */
+/* Estilos para el pie de página */
 footer {
-  padding: 20px;
-  text-align: center;
-  color: #FFFFFF;
-  background-color: #1A3C5A;
+  position: fixed;      /* Fija el pie de página al final */
+  left: 0;              /* Alinea al lado izquierdo */
+  bottom: 0;            /* Lo coloca al fondo de la pantalla */
+  width: 100%;          /* El pie de página ocupa todo el ancho */
+  background-color: #1A3C5A;  
+  color: white;         
+  text-align: center;   /* Centra el texto */
+  padding: 10px 0;      /* Espaciado superior e inferior */
+  font-size: 16px;      
 }
